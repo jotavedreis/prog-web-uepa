@@ -1,0 +1,13 @@
+:root{
+    --primary-color: #eeeeee;
+    --secondary-color: #808080;
+    --realce: #007bff;
+    --cor-vinho: #900000;
+    --cor-vinho-hover: #b30000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
