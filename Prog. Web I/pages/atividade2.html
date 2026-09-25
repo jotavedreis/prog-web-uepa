@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/background.css">
+    <link rel="stylesheet" href="../style/atv2.css">
+
+    <link rel="icon" href="../public/imgs/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../public/imgs/favicon/apple-touch-icon.png">
+    <title>Atividade 2</title>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" rel="noopener noreferrer" class="btn-telas">Voltar para a página principal</a>
+    </header>
+
+    <main>
+        <article class="bloco">
+            <h1>Forms</h1>
+            <form>
+                <div>
+                    <label for="nomePessoa">Nome:</label>
+                    <input type="text" id="nomePessoa" name="nomePessoa" required>
+                </div>
+                <div>
+                    <label for="bio">Biografia:</label>
+                    <textarea id="bio" name="bio" required></textarea>
+                </div>
+
+                <fieldset>
+                    <legend>Endereço:</legend>
+                    <div>
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua" required>
+                    </div>
+                    <div>
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+
+                    <label for="estado">Estado:</label>
+                    <select id="estadoSelect" name="estado">
+                        <option value="PA">Pará</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="AC">Acre</option>
+                    </select>
+                </fieldset>
+
+                <button>Cadastrar</button>
+            </form>
+        </article>
+
+        <article class="bloco">
+            <form>
+                <div>
+                    <p><label>Usuário: <input type="text" id="usuario" name="usuario" required></label></p>
+                </div>
+
+                <div>
+                    <p><label>Senha: <input type="password" id="senha" name="senha" required></label></p>
+                </div>
+
+                <button>Entrar</button>
+            </form>
+        </article>
+    
+</body>
+</html>
