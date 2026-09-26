@@ -10,7 +10,7 @@
 
     <link rel="icon" href="../public/imgs/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="../public/imgs/favicon/apple-touch-icon.png">
-    <title>Atividade 2</title>
+    <title>TestForms</title>
 </head>
 <body>
 
@@ -23,46 +23,71 @@
             <h1>Forms</h1>
             <form>
                 <div>
-                    <label for="nomePessoa">Nome:</label>
-                    <input type="text" id="nomePessoa" name="nomePessoa" required>
+                    <p>
+                        <label>
+                            Nome: <input type="text" id="nomePessoa" name="nomePessoa" placeholder="Informe o nome Completo" required>
+                        </label>
+                    </p>
                 </div>
                 <div>
-                    <label for="bio">Biografia:</label>
-                    <textarea id="bio" name="bio" required></textarea>
+                    <p>
+                        <label>
+                            Biografia: <textarea id="bio" name="bio" required></textarea>
+                        </label>
+                    </p>
                 </div>
 
                 <fieldset>
                     <legend>Endereço:</legend>
                     <div>
-                        <label for="rua">Rua:</label>
-                        <input type="text" id="rua" name="rua" required>
+                        <p>
+                            <label>
+                                Rua: <input type="text" id="rua" name="rua" required>
+                            </label>
+                        </p>
                     </div>
                     <div>
-                        <label for="numero">Número:</label>
-                        <input type="text" id="numero" name="numero" required>
+                        <p>
+                            <label>
+                                Número: <input type="text" id="numero" name="numero" required>
+                            </label>
+                        </p>
                     </div>
 
-                    <label for="estado">Estado:</label>
+                    <p>
+                        <label for="estado">Estado:</label>
+                    </p>
+                    <p>
                     <select id="estadoSelect" name="estado">
                         <option value="PA">Pará</option>
                         <option value="SP">São Paulo</option>
                         <option value="RJ">Rio de Janeiro</option>
                         <option value="AC">Acre</option>
                     </select>
+                    </p>
                 </fieldset>
 
                 <button>Cadastrar</button>
+
             </form>
         </article>
 
         <article class="bloco">
             <form>
                 <div>
-                    <p><label>Usuário: <input type="text" id="usuario" name="usuario" required></label></p>
+                    <p>
+                        <label>
+                            Usuário: <input type="text" id="usuario" name="usuario" required>
+                        </label>
+                    </p>
                 </div>
 
                 <div>
-                    <p><label>Senha: <input type="password" id="senha" name="senha" required></label></p>
+                    <p>
+                        <label>
+                            Senha: <input type="password" id="senha" name="senha" required>
+                        </label>
+                    </p>
                 </div>
 
                 <button>Entrar</button>
