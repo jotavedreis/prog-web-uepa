@@ -1,29 +1,80 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    header {
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .bloco{
+form {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        padding: 30px;
-        margin: 20px;
+        gap: 8px;
+        width: min(100%, 560px);
+        margin-top: 12px;
+    }
 
-        width: 50vw;
-        height: auto;
+form p {
+        align-self: flex-start;
+        margin: 0 0 10px;
+        color: var(--secondary-color);
+        line-height: 1.5;
+    }
 
-        border: 1px solid var(--secondary-color);
-        border-radius: 10px;
+form label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        width: 100%;
+        color: #3a3a3a;
+        font-weight: 700;
+    }
 
-        background-color: var(--primary-color);
+form input,
+form textarea {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 12px 14px;
+        color: #252525;
+        font: inherit;
+        background: #fff;
+        border: 1px solid #c9c9c9;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+form textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+form input:focus,
+form textarea:focus {
+        border-color: var(--realce);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    }
+
+form input:invalid:not(:placeholder-shown),
+form textarea:invalid:not(:placeholder-shown) {
+        border-color: #b30000;
+    }
+
+form button {
+        align-self: flex-start;
+        margin-top: 10px;
+        padding: 12px 22px;
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        background: var(--cor-vinho);
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+form button:hover,
+form button:focus-visible {
+        background: var(--cor-vinho-hover);
+        transform: translateY(-2px);
+    }
+
+@media (max-width: 600px) {
+    form button {
+        align-self: stretch;
     }
 }

@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link id="stylesheet" rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/button.css">
-    <link rel="stylesheet" href="../style/background.css">
     <link rel="stylesheet" href="../style/contato.css">
-    <link rel="stylesheet" href="../style/barralateral.css">
     <link rel="icon" href="../public/imgs/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="../public/imgs/favicon/apple-touch-icon.png">
 </head>
@@ -24,16 +21,33 @@
             </p>
         </article>
 
-        <div class="bloco"> 
-        <h1>Contatos</h1>
-        <ul>
-            <li>Email: <a href="mailto:j.fariasreis@gmail.com" target="_blank">j.fariasreis@gmail.com</a></li>
-            <li>WhatsApp: <a href="https://wa.me/5591999662759" target="_blank">(91) 99966-2759</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/joaovitor-reis/" target="_blank">https://www.linkedin.com/in/joaovitor-reis/</a></li>
-            <li>GitHub: <a href="https://github.com/jotavedreis" target="_blank">https://github.com/jotavedreis</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/_jotavetech/" target="_blank">https://www.instagram.com/_jotavetech/</a></li>
-        </ul>
-    </div>
+        <section class="bloco">
+            <h1>Contatos</h1>
+            <ul>
+                <li>Email: <a href="mailto:j.vitorfreis@gmail.com" target="_blank">j.vitorfreis@gmail.com</a></li>
+                <li>WhatsApp: <a href="https://wa.me/5591999662759" target="_blank">(91) 99966-2759</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/joaovitor-reis/" target="_blank">https://www.linkedin.com/in/joaovitor-reis/</a></li>
+                <li>GitHub: <a href="https://github.com/jotavedreis" target="_blank">https://github.com/jotavedreis</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/_jotavetech/" target="_blank">https://www.instagram.com/_jotavetech/</a></li>
+            </ul>
+        </section>
+
+        <section class="bloco">
+            <h1>Envie uma mensagem</h1>
+            <form action="mailto:j.vitorfreis@gmail.com" method="post" enctype="text/plain">
+                <p>Preencha o formulário abaixo para enviar uma mensagem:</p>
+
+                <label>Nome <input type="text" id="nome" name="nome" required></label>
+
+                <label>E-mail <input type="email" id="email" name="email" required></label>
+
+                <label>Assunto <input type="text" id="assunto" name="assunto" required></label>
+
+                <label>Mensagem <textarea id="mensagem" name="mensagem" rows="6" required></textarea></label>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
     </main>
 
     <footer>

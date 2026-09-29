@@ -1,13 +1,4 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    color: #252525;
-    background: #f5f5f5;
-}
-
-header {
+.cabecalho-perfil {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +36,39 @@ header {
     }
 }
 
-nav {
+.cabecalho-perfil::after {
+    position: absolute;
+    right: 7%;
+    bottom: -70px;
+    width: 180px;
+    height: 180px;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+}
+
+.identificacao .funcao {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: 1.08rem;
+}
+
+.dados-academicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dados-academicos span {
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    background: rgba(0, 0, 0, 0.14);
+    border-radius: 999px;
+}
+
+.menu-principal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,7 +76,7 @@ nav {
     width: min(100% - 32px, 1080px);
     margin: 18px 16px 0;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.82);
+    background: linear-gradient(135deg, #fff 0%, #eeeeee 100%);
     border: 1px solid rgba(144, 0, 0, 0.12);
     border-radius: 14px;
     box-shadow: 0 8px 24px rgba(35, 35, 35, 0.08);
@@ -77,66 +100,216 @@ nav {
     }
 }
 
-main {
-    width: min(100% - 32px, 900px);
-    margin: 34px 16px 48px;
+.boas-vindas {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(170px, 0.5fr);
+    gap: 32px;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(120deg, #520000, #970e0e 68%, #c13a27);
 }
 
-.bloco {
-    padding: clamp(24px, 5vw, 48px);
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(144, 0, 0, 0.14);
-    border-radius: 20px;
-    box-shadow: 0 16px 35px rgba(35, 35, 35, 0.1);
-
-    margin-bottom: 48px;
-
-    h1 {
-        margin: 0 0 12px;
-        color: var(--cor-vinho);
-        font-size: clamp(1.35rem, 3vw, 1.85rem);
-    }
-
-    h1:not(:first-child) {
-        margin-top: 34px;
-    }
-
-    p {
-        margin: 0;
-        color: #4c4c4c;
-        font-size: 1.05rem;
-        line-height: 1.75;
-    }
-
-    a {
-        color: var(--cor-vinho);
-        font-weight: 700;
-    }
+.boas-vindas h1 {
+    max-width: 620px;
+    margin: 6px 0 18px;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.05;
 }
 
-.bloco.b-botoes{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.boas-vindas p:not(.etiqueta),
+.resumo-projeto p {
+    color: rgba(255, 255, 255, 0.84);
+}
 
-        gap: 0.5em;
+.etiqueta {
+    margin: 0 0 8px;
+    color: var(--cor-vinho);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
 
-        margin-top: 20px;
+.boas-vindas .etiqueta {
+    color: #ffb27f;
+}
 
-        a {
-            width: 8vw;
-        }
-    }
+.acoes-principais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+    align-items: center;
+}
+
+.acoes-principais .btn-telas {
+    color: #650000;
+    background: #fff;
+}
+
+.acoes-principais .btn-telas:hover {
+    color: #000000;
+}
+
+.link-secundario {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.resumo-projeto {
+    padding: 24px 0 24px 28px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.resumo-projeto .numero-destaque {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 0.9;
+}
+
+.resumo-projeto p {
+    margin: 10px 0 20px;
+    font-size: 0.9rem;
+}
+
+.linha-destaque {
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #ffb27f;
+}
+
+.informacoes-iniciais {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.informacoes-iniciais .bloco {
+    width: 100%;
+    margin-bottom: 24px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.caminhos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #fff 0%, #eeeeee 100%);
+}
+
+.caminhos > div:first-child {
+    flex: 0 1 auto;
+}
+
+.lista-caminhos {
+    display: flex;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.caminhos .lista-caminhos a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 112px;
+    min-width: 0;
+    padding: 12px 14px;
+    color: #650000;
+    background: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid rgba(144, 0, 0, 0.16);
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.caminhos .lista-caminhos a:hover,
+.caminhos .lista-caminhos a:focus-visible {
+    color: #650000;
+    background: #fff4ef;
+    transform: translateY(-3px);
+}
+
+.lista-caminhos span {
+    color: #b45c41;
+    font-size: 0.72rem;
+}
+
+.bloco.boas-vindas {
+    color: #fff;
+    background: linear-gradient(120deg, #520000, #970e0e 68%, #c13a27);
+}
+
+.bloco.boas-vindas h1 {
+    color: #fff;
+}
+
+.bloco.boas-vindas p:not(.etiqueta),
+.bloco.boas-vindas .resumo-projeto p {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.bloco.boas-vindas .link-secundario {
+    color: #fff;
+}
 
 @media (max-width: 600px) {
-    header {
+    .cabecalho-perfil {
         flex-direction: column;
         text-align: center;
     }
 
-    nav a {
+    .menu-principal a {
         flex: 1 1 130px;
         text-align: center;
+    }
+
+    .boas-vindas,
+    .informacoes-iniciais {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-projeto {
+        padding: 20px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 0;
+    }
+
+    .caminhos {
+        align-items: stretch;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        justify-content: flex-start;
+    }
+
+    .caminhos > div {
+        flex: 0 0 auto;
+    }
+
+    .caminhos > div:first-child {
+        flex: 0 0 auto;
+    }
+
+    .lista-caminhos {
+        width: 100%;
+        margin-top: 12px;
+        justify-content: stretch;
+    }
+
+    .caminhos .lista-caminhos a {
+        flex: 1 1 130px;
     }
 }

@@ -5,66 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página principal do projeto de Programação Web I, contendo informações sobre o autor e links para atividades.">
     <title>Página Principal</title>
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="style/button.css">
-    <link rel="stylesheet" href="style/background.css">
-    <link rel="stylesheet" href="style/style.css"> 
-    <link rel="icon" href="/public/imgs/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/public/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" href="public/imgs/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="public/imgs/favicon/apple-touch-icon.png">
 </head>
 <body>
-    <header>
-        <img src="https://avatars.githubusercontent.com/u/141349338?v=4" alt="Foto de Joao Vitor Reis">
-        <section>
+    <header class="cabecalho-perfil">
+        <img src="https://avatars.githubusercontent.com/u/141349338?v=4" alt="Foto João Vitor Reis">
+
+        <section class="identificacao">
             <h1>João Vitor F. dos Reis</h1>
-            <p>Matrícula: 20260024389</p>
-            <p>Turma: BES2026</p>
+            <p class="funcao">Estudante de Engenharia de Software</p>
+            <div class="dados-academicos">
+                <span>Matrícula: 20260024389</span>
+                <span>Turma: BES2026</span>
+            </div>
         </section>
     </header>
 
-    <nav>
+    <nav class="menu-principal" aria-label="Navegação principal">
         <a href="pages/portifolio.html">Portfólio</a>
         <a href="pages/experiencia.html">Experiência</a>
         <a href="pages/contato.html">Contato</a>
     </nav>
 
     <main>
-        <article class="bloco">
-            <h1>Bem-vindo à Página Principal</h1>
-            <p>
-                Esta é a página principal do seu projeto. Aqui eu irei armazenar os trabalhos
-                solicitados durante a disciplina de Engenharia de Software, disciplina de Programação Web I.
-            </p>
+        <section class="boas-vindas bloco">
+            <div class="boas-vindas-conteudo">
+                <p class="etiqueta">Programação Web I · UEPA</p>
+                <h1>Um espaço para acompanhar minha evolução na web.</h1>
+                <p>
+                    Este é o meu projeto acadêmico para reunir trabalhos, experiências e aprendizados
+                    construídos ao longo da graduação em Engenharia de Software.
+                </p>
+                <div class="acoes-principais">
+                    <a class="btn-telas" href="pages/portifolio.html">Ver meu portfólio</a>
+                    <a class="link-secundario" href="pages/contato.html">Entrar em contato</a>
+                </div>
+            </div>
+            <aside class="resumo-projeto">
+                <span class="numero-destaque">02</span>
+                <p>semestre da graduação</p>
+                <span class="linha-destaque"></span>
+                <p>Projetos e atividades em construção</p>
+            </aside>
+        </section>
 
-            <h1>Informações Importantes</h1>
-            <p>
-                Os arquivos estarão disponiveis no 
-                <a href="https://github.com/jotavedreis/prog-web-uepa" target="_blank" rel="noopener noreferrer">GitHub.</a>
-                <br>
-                <br>
-                Além disso, também ficará disponível para visualização pelo 
-                <a href="https://www.infinityfree.com/" target="_blank" rel="noopener noreferrer">InfinityFree.</a>
-                Você poderá acessar o site pelo link:
-                <a href="https://jotave.ct.ws/" target="_blank" rel="noopener noreferrer">jotave.ct.ws</a>
-            </p>
-        </article>
+        <section class="informacoes-iniciais">
+            <article class="bloco">
+                <p class="etiqueta">Sobre mim</p>
+                <h2>Quem sou eu</h2>
+                <p>
+                    Olá, mundo! Meu nome é João Vitor, mas pode me chamar de Jotave. Sou estudante de Engenharia
+                    de Software na Universidade do Estado do Pará (UEPA) e estou entusiasmado em compartilhar
+                    minha jornada acadêmica e minhas experiências.
+                </p>
+            </article>
 
-        <article class="bloco">
-            <h1>Quem sou eu</h1>
-            <p>
-                Olá, mundo! Meu nome é João Vitor, mas pode me chamar de Jotave. Sou estudante de Engenharia 
-                de Software na Universidade do Estado do Pará (UEPA). Atualmente, estou no 2º semestre do curso,
-                e estou entusiasmado em compartilhar um pouco sobre minha jornada acadêmica e minhas experiências.
-            </p>
-        </article>
+            <article class="bloco">
+                <p class="etiqueta">Acompanhe o projeto</p>
+                <h2>Informações importantes</h2>
+                <p>
+                    Os arquivos estão disponíveis no
+                    <a href="https://github.com/jotavedreis/prog-web-uepa" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                    O site também pode ser visualizado pelo
+                    <a href="https://jotave.ct.ws/" target="_blank" rel="noopener noreferrer">jotave.ct.ws</a>.
+                </p>
+            </article>
+        </section>
 
-        <article class="bloco b-botoes">
-            <h1>Páginas</h1>
-            <a class="btn-telas" href="pages/portifolio.html">Portfólio</a>
-            <a class="btn-telas" href="pages/experiencia.html">Experiência</a>
-            <a class="btn-telas" href="pages/contato.html">Contato</a>
-        </article>
+        <nav class="caminhos bloco" aria-label="Acesso rápido às páginas">
+            <div>
+                <p class="etiqueta">Continue explorando</p>
+                <h2>Conheça outras partes do projeto</h2>
+            </div>
+            <div class="lista-caminhos">
+                <a href="pages/portifolio.html"><span>01</span>Portfólio</a>
+                <a href="pages/experiencia.html"><span>02</span>Experiência</a>
+                <a href="pages/contato.html"><span>03</span>Contato</a>
+            </div>
+        </nav>
     </main>
+
+    <aside>
+        <h2>Outras Páginas</h2>
+            <a href="/pages/portifolio.html">Portifólio</a>
+            <a href="/pages/experiencia.html">Experiência</a>
+            <a href="/pages/contato.html">Contato</a>
+    </aside>
 
     <footer>
         <p>&copy; 2026 João Vitor F. dos Reis. Todos direitos reservados.</p>
