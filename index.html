@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub Principal</title>
+    <meta name="description" content="Hub principal das páginas desenvolvidas nas disciplinas de Programação Web da UEPA.">
+    <link rel="icon" type="image/x-icon" href="public/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="public/favicon/apple-touch-icon.png">
+    <title>Hub de Programação Web | UEPA</title>
+    <link rel="stylesheet" href="style/hub.css">
 </head>
 <body>
-    <h1>Hub Principal</h1>
-    <a href="Prog. Web I/index.html">Programação Web I</a>
-    
+    <header class="topo">
+        <a class="marca" href="index.html" aria-label="Voltar ao início">
+            <span><em>Programação Web</em></span>
+        </a>
+        <p class="status"><span></span> Repositório acadêmico</p>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div class="hero-conteudo">
+                <p class="eyebrow">Hub principal · 2026</p>
+                <h1 id="titulo-principal">Programação Web <br> <em>By. <a href="https://github.com/jotavedreis" target="_blank" rel="noopener noreferrer">Jotave</a></em></h1>
+                <p class="intro">Um ponto de encontro para as páginas, experimentos e projetos construídos durante as disciplinas de Programação Web da UEPA.</p>
+            </div>
+            <div class="marcador" aria-hidden="true">01<br><span>02</span></div>
+        </section>
+
+        <section class="disciplinas" aria-labelledby="titulo-disciplinas">
+            <div class="secao-cabecalho">
+                <p class="eyebrow">Escolha uma disciplina</p>
+            </div>
+
+            <div class="grade-disciplinas">
+                <a class="disciplina disciplina-principal" href="Prog. Web I/index.html">
+                    <div class="numero">01</div>
+                    <div class="disciplina-texto">
+                        <p class="rotulo">Em andamento</p>
+                        <h3>Programação Web I</h3>
+                        <p>Portfólio, experiências e atividades desenvolvidas ao longo da primeira etapa.</p>
+                    </div>
+                    <span class="seta" aria-hidden="true">↗</span>
+                </a>
+
+                <div class="disciplina disciplina-futura" aria-label="Programação Web II em breve">
+                    <div class="numero">02</div>
+                    <div class="disciplina-texto">
+                        <p class="rotulo">Em breve</p>
+                        <h3>Programação Web II</h3>
+                        <p>Um novo espaço para os projetos e aprendizados da próxima disciplina.</p>
+                    </div>
+                    <span class="badge">Próxima etapa</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Universidade do Estado do Pará</p>
+        <p>&copy; 2026 João Vitor F. dos Reis. Todos direitos reservados.</p>
+    </footer>
 </body>
 </html>

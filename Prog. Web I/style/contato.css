@@ -1,80 +1,82 @@
 form {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: min(100%, 560px);
-        margin-top: 12px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(100%, 560px);
+    margin-top: 12px;
 
-form p {
+    p {
         align-self: flex-start;
         margin: 0 0 10px;
-        color: var(--secondary-color);
+        color: var(--muted);
         line-height: 1.5;
     }
 
-form label {
+    label {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
         width: 100%;
-        color: #3a3a3a;
+        color: var(--ink);
         font-weight: 700;
     }
 
-form input,
-form textarea {
+    input,
+    textarea {
         box-sizing: border-box;
         width: 100%;
         padding: 12px 14px;
-        color: #252525;
+        color: var(--ink);
         font: inherit;
-        background: #fff;
-        border: 1px solid #c9c9c9;
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 8px;
         outline: none;
         transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-form textarea {
+    textarea {
         min-height: 140px;
         resize: vertical;
     }
 
-form input:focus,
-form textarea:focus {
-        border-color: var(--realce);
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    input:focus,
+    textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--line);
     }
 
-form input:invalid:not(:placeholder-shown),
-form textarea:invalid:not(:placeholder-shown) {
-        border-color: #b30000;
+    input:invalid:not(:placeholder-shown),
+    textarea:invalid:not(:placeholder-shown) {
+        border-color: var(--accent);
     }
 
-form button {
+    button {
         align-self: flex-start;
         margin-top: 10px;
         padding: 12px 22px;
-        color: #fff;
+        color: var(--panel);
         font: inherit;
         font-weight: 700;
-        background: var(--cor-vinho);
+        background: var(--accent-dark);
         border: 0;
         border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
-form button:hover,
-form button:focus-visible {
-        background: var(--cor-vinho-hover);
+    button:hover,
+    button:focus-visible {
+        background: var(--accent);
         transform: translateY(-2px);
     }
+}
 
 @media (max-width: 600px) {
-    form button {
-        align-self: stretch;
+    form {
+        button {
+            align-self: stretch;
+        }
     }
 }

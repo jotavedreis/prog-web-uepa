@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #0D0D0D;
+    --muted: #8C8C8B;
+    --paper: #f4f1ea;
+    --panel: #fffdf8;
+    --line: #d7d2c8;
+    --accent: #364959;
+    --accent-dark: #24313b;
+    --yellow: #f5c84b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image: linear-gradient(rgba(23, 33, 43, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 33, 43, .045) 1px, transparent 1px);
+    background-size: 34px 34px;
+    font-family: 'Manrope', sans-serif;
+
+    .topo,
+    main,
+    footer {
+        width: min(1120px, calc(100% - 64px));
+        margin: 0 auto;
+    }
+    .topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+    }
+
+    .marca {
+    color: var(--ink);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+    text-decoration: none;
+
+        span {
+            color: var(--accent);
+        }
+    }
+
+    .status,
+    .eyebrow,
+    .rotulo,
+    .numero,
+    .badge {
+        font-family: 'DM Mono', monospace;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+    }
+
+    .status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .68rem;
+
+        span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px #36495923;
+        }
+    }
+
+    .hero {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    align-items: end;
+    gap: 32px;
+    padding: 106px 0 90px;
+    border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+    color: var(--accent-dark);
+    font-size: .7rem;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -.065em;
+}
+
+h1 {
+    max-width: 790px;
+    margin-bottom: 26px;
+    font-size: clamp(3.5rem, 8vw, 7.6rem);
+    line-height: .9;
+    font-weight: 800;
+}
+
+h1 em {
+    color: var(--accent);
+    font-family: Georgia, serif;
+    font-weight: 400;
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+        text-decoration: underline;
+    }
+}
+
+.intro {
+    max-width: 540px;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.marcador {
+    padding: 16px 0 12px 18px;
+    border-left: 2px solid var(--accent);
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    line-height: 1.1;
+
+    span {
+        color: var(--muted);
+        font-size: .9rem;
+    }
+}
+
+.disciplinas {
+    padding: 78px 0 100px;
+}
+
+.secao-cabecalho {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 34px;
+
+    h2 {
+        max-width: 380px;
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        line-height: 1;
+    }
+
+    .eyebrow {
+        margin-bottom: 6px;
+    }
+}
+
+.grade-disciplinas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.disciplina {
+    position: relative;
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid var(--ink);
+    text-decoration: none;
+}
+
+.disciplina-principal {
+    color: var(--panel);
+    background: var(--ink);
+    transition: transform .25s ease, background .25s ease;
+
+    &:hover,
+    &:focus-visible {
+        background: var(--accent-dark);
+        transform: translateY(-6px);
+    }
+}
+
+.disciplina-futura {
+    color: var(--muted);
+    border-color: var(--line);
+    background: rgba(255, 253, 248, .64);
+
+    .rotulo {
+        color: var(--accent-dark);
+    }
+}
+
+.numero {
+    font-size: .75rem;
+}
+
+.rotulo {
+    margin-bottom: 10px;
+    color: var(--yellow);
+    font-size: .66rem;
+}
+
+.disciplina-texto {
+    max-width: 390px;
+
+    p:last-child {
+        max-width: 340px;
+        margin-bottom: 0;
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+}
+
+h3 {
+    margin-bottom: 14px;
+    color: inherit;
+    font-size: clamp(1.7rem, 3vw, 2.55rem);
+    line-height: .98;
+}
+
+.seta {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.badge {
+    align-self: flex-start;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .6rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0 34px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: .65rem;
+    text-transform: uppercase;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .topo {
+        padding: 22px 0;
+    }
+
+    .status {
+        font-size: .58rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 76px 0 62px;
+    }
+
+    h1 {
+        font-size: clamp(3.1rem, 17vw, 5.2rem);
+    }
+
+    .marcador {
+        width: fit-content;
+        padding-top: 8px;
+    }
+
+    .disciplinas {
+        padding: 58px 0 72px;
+    }
+
+    .secao-cabecalho,
+    .grade-disciplinas,
+    footer {
+        display: block;
+    }
+
+    .secao-cabecalho {
+        h2 {
+            margin-top: 28px;
+        }
+    }
+
+    .disciplina + .disciplina {
+        margin-top: 14px;
+    }
+
+    footer {
+        p + p {
+            margin-top: 10px;
+        }
+    }
+}
+}

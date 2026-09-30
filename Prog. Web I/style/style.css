@@ -1,10 +1,12 @@
-:root{
-    --primary-color: #eeeeee;
-    --secondary-color: #808080;
-    --realce: #007bff;
-    --cor-vinho: #900000;
-    --cor-vinho-hover: #b30000;
-    --cor-cinza-claro: #cbcbcb;
+:root {
+    --ink: #0D0D0D;
+    --muted: #8C8C8B;
+    --paper: #f4f1ea;
+    --panel: #fffdf8;
+    --line: #d7d2c8;
+    --accent: #364959;
+    --accent-dark: #24313b;
+    --yellow: #f5c84b;
 }
 
 html {
@@ -20,135 +22,131 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    color: #252525;
-    background: #f5f5f5 url(../public/imgs/background/background-white.jpg) center / cover no-repeat fixed;
+    color: var(--ink);
+    background: var(--paper) url(../public/imgs/background/background-white.jpg) center / cover no-repeat fixed;
+
+    header {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    > aside {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        min-height: 25vh;
+        padding: 20px;
+        gap: 5px;
+        background: linear-gradient(var(--panel), var(--line));
+        border-radius: 20px;
+        box-shadow: 0 16px 35px var(--line);
+
+        h2 {
+            margin: 0 0 12px;
+            color: var(--ink);
+        }
+
+        a {
+            display: block;
+            width: min(100%, 220px);
+            min-height: 44px;
+            margin-bottom: 8px;
+            padding: 10px 14px;
+            color: var(--panel);
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            background: var(--accent-dark);
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+                color: var(--line);
+                background: var(--accent);
+            }
+        }
+    }
+
+    main {
+    width: min(100% - 32px, 900px);
+    margin: 34px 16px 48px;
+    }
+
+    .bloco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: min(100% - 40px, 900px);
+        margin: 20px auto;
+        padding: 30px;
+        background: linear-gradient(135deg, var(--panel) 0%, var(--line) 100%);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 16px 35px var(--line);
+        h1,
+        h2 {
+            margin: 0 0 12px;
+            color: var(--accent-dark);
+            font-size: clamp(1.35rem, 3vw, 1.85rem);
+        }
+
+        p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        a {
+            color: var(--accent-dark);
+            font-weight: 700;
+        }
+    }
+
+    .btn-telas {
+        display: inline-block;
+        padding: 20px 60px;
+        margin: 10px;
+        color: var(--panel);
+        text-align: center;
+        text-decoration: none;
+        background: var(--accent-dark);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-telas:hover,
+    .btn-telas:focus-visible {
+        color: var(--panel);
+        background: var(--accent);
+        box-shadow: 0 4px 8px var(--line);
+        transform: scale(1.05);
+    }
+
+    footer {
+        margin-top: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    @media (max-width: 760px) {
+        > aside {
+            display: none;
+        }
+    }
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-body > header {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    width: min(100% - 32px, 900px);
-    margin: 34px 16px 48px;
-}
-
-.bloco {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: min(100% - 40px, 900px);
-    margin: 20px auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #fff 0%, #eeeeee 100%);
-    border: 1px solid rgba(144, 0, 0, 0.14);
-    border-radius: 20px;
-    box-shadow: 0 16px 35px rgba(35, 35, 35, 0.1);
-}
-
-.bloco h1,
-.bloco h2 {
-    margin: 0 0 12px;
-    color: var(--cor-vinho);
-    font-size: clamp(1.35rem, 3vw, 1.85rem);
-}
-
-.bloco p {
-    margin: 0;
-    color: #4c4c4c;
-    font-size: 1.05rem;
-    line-height: 1.75;
-}
-
-.bloco a {
-    color: var(--cor-vinho);
-    font-weight: 700;
-}
-
-.btn-telas {
-    display: inline-block;
-    padding: 20px 60px;
-    margin: 10px;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    background: var(--cor-vinho);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.btn-telas:hover,
-.btn-telas:focus-visible {
-    color: #fff;
-    background: var(--cor-vinho-hover);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-body > aside {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    min-height: 25vh;
-    padding: 20px;
-    gap: 5px;
-    background: linear-gradient(#ebebeb, #dbdbdb);
-    border-radius: 20px;
-    box-shadow: 0 16px 35px rgba(35, 35, 35, 0.1);
-}
-
-body > aside h2 {
-    margin: 0 0 12px;
-    color: #000;
-}
-
-body > aside a {
-    display: block;
-    width: min(100%, 220px);
-    min-height: 44px;
-    margin-bottom: 8px;
-    padding: 10px 14px;
-    color: var(--primary-color);
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    background: var(--cor-vinho);
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body > aside a:hover,
-body > aside a:focus-visible {
-    color: var(--cor-cinza-claro);
-    background: var(--cor-vinho-hover);
-}
-
-footer {
-    margin-top: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-@media (max-width: 760px) {
-    body > aside {
-        position: static;
-        width: min(100% - 40px, 320px);
-        min-height: 0;
-        margin: 0 auto 24px;
-    }
 }
