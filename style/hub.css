@@ -50,7 +50,6 @@ body {
         }
     }
 
-    .status,
     .eyebrow,
     .rotulo,
     .numero,
@@ -58,23 +57,6 @@ body {
         font-family: 'DM Mono', monospace;
         letter-spacing: .04em;
         text-transform: uppercase;
-    }
-
-    .status {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin: 0;
-    color: var(--muted);
-    font-size: .68rem;
-
-        span {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--accent);
-            box-shadow: 0 0 0 4px #36495923;
-        }
     }
 
     .hero {
@@ -234,11 +216,11 @@ h1 em {
     }
 }
 
-h3 {
+h2 {
     margin-bottom: 14px;
     color: inherit;
     font-size: clamp(1.7rem, 3vw, 2.55rem);
-    line-height: .98;
+    font-weight: 700;
 }
 
 .seta {
@@ -276,10 +258,6 @@ footer {
 @media (max-width: 700px) {
     .topo {
         padding: 22px 0;
-    }
-
-    .status {
-        font-size: .58rem;
     }
 
     .hero {

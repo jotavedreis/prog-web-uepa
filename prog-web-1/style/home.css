@@ -1,5 +1,5 @@
 body {
-        .cabecalho-perfil {
+    .cabecalho-perfil {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,20 +22,6 @@ body {
             border-radius: 50%;
             box-shadow: 0 8px 20px var(--line);
         }
-
-        section {
-            h1 {
-                margin: 0 0 10px;
-                font-size: clamp(1.65rem, 4vw, 2.8rem);
-                line-height: 1.1;
-            }
-
-            p {
-                margin: 5px 0;
-                color: var(--line);
-            }
-        }
-        }
     }
 
     .identificacao {
@@ -44,20 +30,20 @@ body {
             color: var(--panel);
             font-size: 1.08rem;
         }
-    }
 
-    .dados-academicos {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+        .dados-academicos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
 
-        span {
-            padding: 6px 10px;
-            color: var(--panel);
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
-            background: var(--accent-dark);
-            border-radius: 999px;
+            span {
+                padding: 6px 10px;
+                color: var(--panel);
+                font-size: 0.78rem;
+                letter-spacing: 0.04em;
+                background: var(--accent-dark);
+                border-radius: 999px;
+            }
         }
     }
 
@@ -99,25 +85,46 @@ body {
         gap: 32px;
         align-items: center;
         color: var(--panel);
-        background: linear-gradient(120deg, var(--accent-dark), var(--accent));
 
         h1 {
             max-width: 620px;
             margin: 6px 0 18px;
-            color: var(--panel);
             font-size: clamp(2rem, 5vw, 3.4rem);
             line-height: 1.05;
         }
+    }
 
-        p:not(.etiqueta) {
-            color: var(--line);
+    .bloco.boas-vindas {
+        background: linear-gradient(120deg, var(--accent-dark), var(--accent));
+    }
+
+    .bloco.boas-vindas h1 {
+        color: var(--panel);
+    }
+
+    .bloco.boas-vindas p:not(.etiqueta),
+    .bloco.boas-vindas .resumo-projeto p {
+        color: var(--line);
+    }
+
+    .bloco.boas-vindas .link-secundario {
+        color: var(--panel);
+    }
+
+    .bloco {
+        img {
+            padding: 10px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
         }
     }
 
     .etiqueta {
         margin: 0 0 8px;
-        color: var(--accent-dark);
-        font-size: 0.74rem;
+        color: var(--accent);
+        font-size: 1rem;
         font-weight: 800;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -133,10 +140,6 @@ body {
         .btn-telas {
             color: var(--accent-dark);
             background: var(--panel);
-
-            &:hover {
-                color: var(--paper);
-            }
         }
     }
 
@@ -144,31 +147,6 @@ body {
         color: var(--panel);
         font-weight: 700;
         text-decoration: none;
-    }
-
-    .resumo-projeto {
-        padding: 24px 0 24px 28px;
-        border-left: 1px solid var(--line);
-
-        .numero-destaque {
-            display: block;
-            font-size: 4rem;
-            font-weight: 800;
-            line-height: 0.9;
-        }
-
-        p {
-            margin: 10px 0 20px;
-            color: var(--line);
-            font-size: 0.9rem;
-        }
-    }
-
-    .linha-destaque {
-        display: block;
-        width: 45px;
-        height: 3px;
-        background: var(--yellow);
     }
 
     .informacoes-iniciais {
@@ -235,41 +213,11 @@ body {
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: 10px;
-    }
 
-    .lista-caminhos {
         span {
-        color: var(--accent);
-        font-size: 0.72rem;
+            color: var(--accent);
+            font-size: 0.72rem;
         }
-    }
-
-    .bloco{
-        img{
-            padding: 10px;
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-    }
-
-    .bloco.boas-vindas {
-        color: var(--panel);
-        background: linear-gradient(120deg, var(--accent-dark), var(--accent));
-    }
-
-    .bloco.boas-vindas h1 {
-        color: var(--panel);
-    }
-
-    .bloco.boas-vindas p:not(.etiqueta),
-    .bloco.boas-vindas .resumo-projeto p {
-        color: var(--line);
-    }
-
-    .bloco.boas-vindas .link-secundario {
-        color: var(--panel);
     }
 
     @media (max-width: 600px) {
@@ -290,21 +238,13 @@ body {
             grid-template-columns: 1fr;
         }
 
-        .resumo-projeto {
-            padding: 20px 0 0;
-            border-top: 1px solid var(--line);
-            border-left: 0;
-        }
-
         .caminhos {
             align-items: stretch;
             flex-direction: column;
             height: auto;
             min-height: 0;
             justify-content: flex-start;
-        }
 
-        .caminhos {
             > div,
             > div:first-child {
                 flex: 0 0 auto;
@@ -322,5 +262,5 @@ body {
             margin-top: 12px;
             justify-content: stretch;
         }
-
     }
+}

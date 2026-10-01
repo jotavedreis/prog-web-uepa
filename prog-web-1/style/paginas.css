@@ -1,0 +1,54 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS DE PÁGINA
+   ========================================= */
+
+.portifolio-header {
+    text-align: center;
+    padding: 30px 20px;
+
+    h1 {
+        margin-bottom: 20px;
+        color: var(--accent-dark);
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.experiencia-header {
+    text-align: center;
+    padding: 30px 20px;
+
+    h1 {
+        margin-bottom: 20px;
+        color: var(--accent-dark);
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.contato-header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.videos-table {
+    margin: 20px auto;
+
+    thead th {
+        background: var(--accent-dark);
+        color: var(--panel);
+        padding: 12px;
+    }
+
+    tbody tr:nth-child(even) {
+        background: var(--panel);
+    }
+
+    tbody tr:hover {
+        background: var(--paper);
+    }
+}
+
+@media (max-width: 768px) {
+    .videos-table {
+        overflow-x: auto;
+    }
+}

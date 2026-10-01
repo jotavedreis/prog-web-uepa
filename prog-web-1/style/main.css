@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --ink: #0D0D0D;
     --muted: #8C8C8B;
@@ -7,10 +13,6 @@
     --accent: #364959;
     --accent-dark: #24313b;
     --yellow: #f5c84b;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 body {
@@ -75,8 +77,8 @@ body {
     }
 
     main {
-    width: min(100% - 32px, 900px);
-    margin: 34px 16px 48px;
+        width: min(100% - 32px, 900px);
+        margin: 34px 16px 48px;
     }
 
     .bloco {
@@ -91,6 +93,7 @@ body {
         border: 1px solid var(--line);
         border-radius: 20px;
         box-shadow: 0 16px 35px var(--line);
+
         h1,
         h2 {
             margin: 0 0 12px;
@@ -98,9 +101,9 @@ body {
             font-size: clamp(1.35rem, 3vw, 1.85rem);
         }
 
-        p {
+        p:not(.etiqueta) {
             margin: 0;
-            color: var(--muted);
+            color: var(--ink);
             font-size: 1.05rem;
             line-height: 1.75;
         }
@@ -108,6 +111,18 @@ body {
         a {
             color: var(--accent-dark);
             font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 8px;
+                padding: 8px 12px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 8px;
+            }
         }
     }
 
@@ -122,14 +137,14 @@ body {
         border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    }
 
-    .btn-telas:hover,
-    .btn-telas:focus-visible {
-        color: var(--panel);
-        background: var(--accent);
-        box-shadow: 0 4px 8px var(--line);
-        transform: scale(1.05);
+        &:hover,
+        &:focus-visible {
+            color: var(--panel);
+            background: var(--accent);
+            box-shadow: 0 4px 8px var(--line);
+            transform: scale(1.05);
+        }
     }
 
     footer {
@@ -145,8 +160,112 @@ body {
     }
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(100%, 560px);
+    margin-top: 12px;
+
+    p {
+        align-self: flex-start;
+        margin: 0 0 10px;
+        color: var(--muted);
+        line-height: 1.5;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        width: 100%;
+        color: var(--ink);
+        font-weight: 700;
+    }
+
+    input,
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 12px 14px;
+        color: var(--ink);
+        font: inherit;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--line);
+    }
+
+    input:invalid:not(:placeholder-shown),
+    textarea:invalid:not(:placeholder-shown) {
+        border-color: var(--accent);
+    }
+
+    button {
+        align-self: flex-start;
+        margin-top: 10px;
+        padding: 12px 22px;
+        color: var(--panel);
+        font: inherit;
+        font-weight: 700;
+        background: var(--accent-dark);
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    button:hover,
+    button:focus-visible {
+        background: var(--accent);
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        button {
+            align-self: stretch;
+        }
+    }
+}
+
+.instituicao {
+    font-style: italic;
+    color: var(--accent);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    td {
+        padding: 10px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    &[alt*="Foto"] {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
