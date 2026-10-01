@@ -80,10 +80,10 @@ body {
     }
 
     .boas-vindas {
-        display: grid;
-        grid-template-columns: minmax(0, 1.5fr) minmax(170px, 0.5fr);
-        gap: 32px;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
         color: var(--panel);
 
         h1 {
@@ -95,6 +95,7 @@ body {
     }
 
     .bloco.boas-vindas {
+        width: 100%;
         background: linear-gradient(120deg, var(--accent-dark), var(--accent));
     }
 
@@ -233,7 +234,6 @@ body {
             }
         }
 
-        .boas-vindas,
         .informacoes-iniciais {
             grid-template-columns: 1fr;
         }
